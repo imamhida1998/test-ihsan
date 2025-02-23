@@ -1,0 +1,24 @@
+2025/02/23 18:06:14 Database connected successfully!
+2025/02/23 18:08:39 Database connected successfully!
+2025/02/23 18:18:00 Database connected successfully!
+2025/02/23 18:18:06 Database connected successfully!
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:28:10+07:00"}
+{"level":"info","msg":"CreateNasabah{\"NoRekening\":\"\"}","time":"2025-02-23T18:28:23+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:29:41+07:00"}
+{"level":"info","msg":"CreateNasabah{\"NoRekening\":\"\"}","time":"2025-02-23T18:29:48+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:32:45+07:00"}
+{"level":"info","msg":"CreateNasabah{\"NoRekening\":\"\"}","time":"2025-02-23T18:33:05+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:46:35+07:00"}
+{"level":"info","msg":"\u0026{{0x140005aac40 -1 200} 0x140001a8000 0x14000232200 [] [0x10315b0a0] 0 /api/login 0x1400011cd00 0x1400000ce70 0x1400000ce88 {{0 0} 0 0 {{} 0} {{} 0}} map[]  [] map[] map[] 0}Login{\"no_hp\":\"081317767015\",\"password\":\"testing\"}","time":"2025-02-23T18:46:40+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:49:33+07:00"}
+{"level":"info","msg":"\u0026{{0x140001d2000 -1 200} 0x140001fe000 0x140001fa000 [] [0x1027f1270 0x1028930a0] 1 /api/login 0x14000134d00 0x140001121e0 0x140001121f8 {{0 0} 0 0 {{} 0} {{} 0}} map[request_id:1740311378050645000]  [] map[] map[] 0}Login{\"no_hp\":\"081317767015\",\"password\":\"testing\"}","time":"2025-02-23T18:49:39+07:00"}
+{"fields.msg":"Request processed","fields.time":"2025-02-23T18:49:40+07:00","ip":"::1","latency":"2.729226208s","level":"info","method":"POST","msg":"","path":"/api/login","request_id":"1740311378050645000","status":200,"time":"2025-02-23T18:49:40+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:50:22+07:00"}
+{"level":"info","msg":"\u0026{{0x14000152380 -1 200} 0x140001d8140 0x1400023a400 [] [0x1013b9270 0x101393680 0x10145b0a0] 2 /api/login 0x14000124680 0x140000be510 0x140000be528 {{0 0} 0 0 {{} 0} {{} 0}} map[request_id:1740311426146572000]  [] map[] map[] 0}Login{\"no_hp\":\"081317767015\",\"password\":\"testing\"}","time":"2025-02-23T18:50:27+07:00"}
+{"fields.msg":"Request processed","fields.time":"2025-02-23T18:50:28+07:00","ip":"::1","latency":"2.809585041s","level":"info","method":"POST","msg":"","path":"/api/login","request_id":"1740311426146572000","status":200,"time":"2025-02-23T18:50:28+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T18:54:55+07:00"}
+{"fields.msg":"Request processed","fields.time":"2025-02-23T18:55:02+07:00","ip":"::1","latency":"11.5µs","level":"info","message":"{\"no_hp\":\"081317767015\",\"password\":\"testing\"}","method":"POST","msg":"","path":"/api/login","request_id":"1740311702868874000","status":200,"time":"2025-02-23T18:55:02+07:00"}
+{"fields.msg":"Request processed","fields.time":"2025-02-23T18:55:46+07:00","ip":"::1","latency":"47.077176166s","level":"info","method":"POST","msg":"","path":"/api/login","request_id":"1740311699526256000","status":200,"time":"2025-02-23T18:55:46+07:00"}
+{"level":"info","msg":"Success koneksi db connected","time":"2025-02-23T20:40:33+07:00"}
+{"fields.msg":"Request processed","fields.time":"2025-02-23T20:40:46+07:00","function":"NasabahController.Login","ip":"::1","latency":"11.833µs","level":"info","message":"{\"no_hp\":\"081317767015\",\"password\":\"testing\"}","method":"POST","msg":"","path":"/api/login","request_id":"1740318046037743000","status":200,"time":"2025-02-23T20:40:46+07:00"}
+{"fields.msg":"Request processed","fields.time":"2025-02-23T20:41:09+07:00","ip":"::1","latency":"29.078126875s","level":"info","method":"POST","msg":"","path":"/api/login","request_id":"1740318040791491000","status":200,"time":"2025-02-23T20:41:09+07:00"}

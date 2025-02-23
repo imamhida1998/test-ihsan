@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "9f66af11-ffa5-494a-859c-d9e864ee3106",
+		"name": "Test Ihsan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16088351"
+	},
+	"item": [
+		{
+			"name": "Daftar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nama\":\"imam\",\n    \"nik\":\"012301031\",\n    \"no_hp\":\"081317767015\",\n    \"password\":\"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"no_hp\":\"081317767015\",\n    \"password\":\"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nabung",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWsiOiIwMTIzMDEwMzEifQ.5DxaKPKAdkLV3eHqf9yw5fqXOUCeZRo8xq7HslqHg4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"no_rekening\":\"0927691673\",\n    \"nominal\":\"10000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/nasabah/tabung",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nasabah",
+						"tabung"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tarik",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWsiOiIwMTIzMDEwMzEifQ.5DxaKPKAdkLV3eHqf9yw5fqXOUCeZRo8xq7HslqHg4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"no_rekening\":\"0927691673\",\n    \"nominal\":\"10000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/nasabah/tarik",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nasabah",
+						"tarik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saldo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuaWsiOiIwMTIzMDEwMzEifQ.5DxaKPKAdkLV3eHqf9yw5fqXOUCeZRo8xq7HslqHg4Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/nasabah/saldo/0927691673",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"nasabah",
+						"saldo",
+						"0927691673"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

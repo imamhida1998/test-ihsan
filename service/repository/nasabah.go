@@ -7,4 +7,5 @@ type RepositoryNasabah interface {
 	GetDetailNasabahByNIK(Nik string) (*model.Nasabah, error)
 	CheckDataNasabahByNik(Nik string) (bool, error)
 	CheckDataNasabahByNoHpAndPassword(noHp, password string) (*model.Nasabah, error)
+	Nabung(nasabah *model.Nasabah) error
 }

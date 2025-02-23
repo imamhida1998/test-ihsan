@@ -2,15 +2,16 @@ package db
 
 import (
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/sirupsen/logrus"
 	"log"
+	"test-ihsan/lib/logger"
 
 	"test-ihsan/config"
 )
 
 var (
-	Mysql *gorm.DB
+	PostgreSQL *gorm.DB
 )
 
 func InitDBMysQL(config config.Config) error {
@@ -23,9 +24,9 @@ func InitDBMysQL(config config.Config) error {
 		}).Error("Env init failed")
 		return err
 	}
-	dataSourceName := paramsDB.DBName + ":" + paramsDB.Password + "@tcp(" + paramsDB.Host + ":" + paramsDB.Port + ")/" + paramsDB.DBName + "?parseTime=true"
 
-	Mysql, err = gorm.Open("mysql", dataSourceName)
+	dataSourceName := "host=" + paramsDB.Host + " user=" + paramsDB.Username + " password=" + paramsDB.Password + " dbname=" + paramsDB.DBName + " port=" + paramsDB.Port + " sslmode=disable TimeZone=Asia/Jakarta"
+	PostgreSQL, err = gorm.Open("postgres", dataSourceName)
 	if err != nil {
 		logrus.WithFields(logrus.Fields{
 			"event":  "invalid_config",
@@ -34,12 +35,12 @@ func InitDBMysQL(config config.Config) error {
 		return err
 	}
 
-	err = Mysql.DB().Ping()
+	err = PostgreSQL.DB().Ping()
 	if err != nil {
 
 		log.Fatalf("failed to ping DB: %v", err)
 	}
 
-	log.Println("Database connected successfully!")
+	logger.Log.Infof("Success koneksi db connected")
 	return nil
 }

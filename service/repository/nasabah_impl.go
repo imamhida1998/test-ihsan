@@ -13,12 +13,12 @@ func NewRepositoryNasabah() RepositoryNasabah {
 }
 
 func (r *Nasabah) CreateNasabah(params *model.Nasabah) error {
-	return db.Mysql.Create(&params).Error
+	return db.PostgreSQL.Create(&params).Error
 }
 
 func (r *Nasabah) GetDetailNasabahByNIK(Nik string) (*model.Nasabah, error) {
 	var nasabah model.Nasabah
-	err := db.Mysql.First(&nasabah, "NIK = ?", Nik).Error
+	err := db.PostgreSQL.First(&nasabah, "NIK = ?", Nik).Error
 	if err != nil {
 		return nil, err
 	}
@@ -29,7 +29,7 @@ func (r *Nasabah) GetDetailNasabahByNIK(Nik string) (*model.Nasabah, error) {
 func (r *Nasabah) CheckDataNasabahByNik(Nik string) (bool, error) {
 	var nasabah model.Nasabah
 	var count int64
-	db.Mysql.Model(&nasabah).Where("NIK = ?", Nik).Count(&count)
+	db.PostgreSQL.Model(&nasabah).Where("NIK = ?", Nik).Count(&count)
 
 	if count > 0 {
 		return true, nil
@@ -41,7 +41,7 @@ func (r *Nasabah) CheckDataNasabahByNik(Nik string) (bool, error) {
 func (r *Nasabah) CheckDataNasabahByNoHpAndPassword(noHp, password string) (*model.Nasabah, error) {
 	var nasabah model.Nasabah
 	//var count int64
-	err := db.Mysql.Model(&nasabah).Where(" no_hp = ? and password = ?", noHp, password).Find(&nasabah).Error
+	err := db.PostgreSQL.Model(&nasabah).Where(" no_hp = ? and password = ?", noHp, password).Find(&nasabah).Error
 	if err != nil {
 		return nil, err
 	}
@@ -50,4 +50,9 @@ func (r *Nasabah) CheckDataNasabahByNoHpAndPassword(noHp, password string) (*mod
 	} else {
 		return nil, errors.New("nasabah not found")
 	}
+}
+
+func (r *Nasabah) Nabung(nasabah *model.Nasabah) error {
+	return db.PostgreSQL.Model(&nasabah).Save(&nasabah).Error
+
 }
