@@ -43,7 +43,7 @@ func Info(c *gin.Context, function, msg string) {
 		"latency":    fmt.Sprintf("%v", duration),
 		"ip":         clientIP,
 		"message":    msg,
-		"time":       time.Now().Format(time.RFC3339), // Tambahkan timestamp
+		"time":       time.Now().Format(time.RFC3339),
 	})
 
 	entry.WithField("msg", "Request processed").Info("")

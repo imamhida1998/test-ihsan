@@ -65,8 +65,6 @@ func (u *nasabahUsecase) DaftarNasabah(ctx *gin.Context, params *request.Daftar)
 	}
 	return reqDaftar, nil
 
-	return nil, errors.New("nasabah telah terdaftar")
-
 }
 
 func (u *nasabahUsecase) GetDetailNasabah(ctx *gin.Context, nik string) (*model.Nasabah, error) {

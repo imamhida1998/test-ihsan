@@ -10,7 +10,7 @@ type Nasabah struct {
 	NoHp         string     `json:"no_hp" gorm:"type:varchar(30)"`
 	Saldo        float64    `json:"saldo" gorm:"type:DECIMAL(15,2);"`
 	NoRekening   string     `json:"no_rekening" gorm:"type:varchar(30)"`
-	IdBank       string     `json:"id_bank" gorm:"type:varchar(36);unique"`
+	IdBank       string     `json:"id_bank" gorm:"type:varchar(36);"`
 	Password     string     `json:"password" gorm:"type:varchar(100)"`
 	PetugasRekam string     `json:"petugasRekam" gorm:"type:varchar(100)"`
 	TanggalRekam time.Time  `json:"tanggalRekam" gorm:"type:timestamp;default:CURRENT_TIMESTAMP"`
